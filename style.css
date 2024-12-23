@@ -242,3 +242,24 @@ img {
 #popupCloser:hover {
   filter: brightness(150%);
 }
+@keyframes boing {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+#soundImage {
+  left: 4%;
+  top: 6%;
+  width: 20%;
+  transition: transform 0.3s; /* Ensure smooth transition */
+}
+.boing {
+  animation: boing 0.3s ease; /* Match the duration with the timeout in JavaScript */
+}

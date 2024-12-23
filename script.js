@@ -29,7 +29,6 @@ function handleSpriteClick(e) {
 function closePopup() {
     popup.classList.remove('open');
 }
-
 // Function to toggle audio playback
 function toggleAudio() {
     if (isPlaying) {
@@ -40,8 +39,15 @@ function toggleAudio() {
         soundImage.src = 'img/play.png';
     }
     isPlaying = !isPlaying;
-}
 
+    // Trigger the boing animation
+    soundImage.classList.add('boing');
+    
+    // Remove the animation class after it completes
+    setTimeout(() => {
+        soundImage.classList.remove('boing');
+    }, 300); // Match this duration with the animation duration
+}
 // Prevent context menu on images
 function preventContextMenu(e) {
     if (e.target.tagName === 'IMG') {
