@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <meta name="description" content="A brief description of your page for SEO.">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preload" href="img/bg/1.png" as="image">
+    <link rel="preload" href="img/mute.png" as="image">
+    <link rel="preload" href="img/loading page.png" as="image">
+    <link rel="preload" href="img/X.png" as="image">
+    <link rel="preload" href="img/pop1.png" as="image">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container" data-scene="1">
+            <img id="bg" src="img/bg/1.png" alt="Background Image" loading="lazy">
+            <img id="Amelia" class="sprite" data-popup-id="1" src="img/obj/Amelia.png" alt="Character Amelia">
+            <img id="Dimas" class="sprite" data-popup-id="2" src="img/obj/Dimasrawr.png" alt="Character Dimas">
+            <img id="limbah" class="sprite" data-popup-id="6" src="img/obj/Limbahrawr.png" alt="Limbah Character">
+            <img id="b3" class="sprite" data-popup-id="5" src="img/obj/B3.png" alt="B3 Object">
+            <img id="anorganik" class="sprite" data-popup-id="4" src="img/obj/Anorganik.png" alt="Anorganik Object">
+            <img id="organik" class="sprite" data-popup-id="3" src="img/obj/Organik.png" alt="Organik Object">
+            <img id="celengan" class="sprite" data-popup-id="7" src="img/obj/Celengan.png" alt="Celengan Object">
+            <img id="truk" class="sprite" data-popup-id="8" src="img/obj/Truk.png" alt="Truck">
+            <img id="medal" class="sprite" data-popup-id="9" src="img/obj/Award.png" alt="Award">
+            <img id="poster1" class="sprite" data-popup-id="10" src="img/obj/Pemanfaatan.png" alt="Pemanfaatan Poster">
+            <img id="poster4" class="sprite" data-popup-id="11" src="img/obj/3R.png" alt="3R Poster">
+            <img id="poster3" class="sprite" data-popup-id="12" src="img/obj/Pengelolaan.png" alt="Pengelolaan Poster">
+            <img id="tablet" class="sprite" data-popup-id="13" src="img/obj/Sosmed.png" alt="Social Media Tablet">
+            <img id="danger" class="sprite" data-popup-id="14" src="img/obj/Danger.png" alt="Danger Sign">
+            <img id="bin" class="sprite" data-popup-id="15" src="img/obj/Bank Sampah.png" alt="Bank Sampah">
+            <img id="book" class="sprite" data-popup-id="16" src="img/obj/Penanggulangan.png" alt="Penanggulangan Book">
+            <img id="soundImage" class="sprite2" src="img/mute.png" alt="Mute Sound">
+            <img id="loader" class="loader hidden" src="img/loading page.png" alt="Loading Indicator">
+        </div>
+    </div>
+    <div id="switcher" role="navigation" aria-label="Page Switcher">
+        <div id="page1" class="active" role="button" tabindex="0" aria-pressed="true">1</div>
+        <div id="page2" class="page-button" role="button" tabindex="0" aria-pressed="false">2</div>
+        <div id="page3" class="page-button" role="button" tabindex="0" aria-pressed="false">3</div>
+    </div>
+    <div id="popup" role="dialog" aria-labelledby ="popupTitle" aria-hidden="true">
+        <div id="popupBody">
+            <img id="popupImg" src="img/pop1.png" alt="Popup Image">
+        </div>
+        <div id="popupControls">
+            <img id="popupCloser" src="img/X.png" alt="Close Popup" role="button" tabindex="0">
+        </div>
+    </div>
+
+    <audio loop id="myAudio" src="[no copyright music] 'Wonder' cute lofi background music.mp3" type="audio/mpeg"></audio>
+
+    <script src="script.js" async></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+body {
+  background-color: #ac715b;
+}
+
+img {
+  user-drag: none; /* Simplified for modern browsers */
+}
+
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: hidden;
+}
+
+#container, #container2 {
+  height: 100%;
+  width: fit-content;
+  position: relative;
+  margin: 0 auto; /* Combined margin properties */
+  font-family: B04;
+}
+
+#bg {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.sprite, .sprite2 {
+  width: 12%;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sprite {
+  border: 0;
+  border-radius: 1px;
+  padding: 2%;
+  color: white;
+  filter: drop-shadow(1px 2px 2px rgb(84, 6, 6));
+}
+
+.sprite:hover {
+  filter: drop-shadow(3px 5px 5px rgb(255, 237, 232));
+  transform: scale(1.03);
+}
+
+#soundImage {
+  left: 4%;
+  top: 6%;
+  width: 20%;
+}
+
+.loader {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+/* Scene-specific styles */
+#container[data-scene="1"] #Amelia {
+  left: 0;
+  top: 25%;
+  width: 46%;
+}
+
+#container[data-scene="1"] #Dimas {
+  left: 54%;
+  top: 14%;
+  width: 41%;
+}
+
+#container[data-scene="2"] #organik {
+  left: 7%;
+  top: 78%;
+  width: 32%;
+}
+
+#container[data-scene="2"] #anorganik {
+  left: 29%;
+  top: 75%;
+  width: 32%;
+}
+
+#container[data-scene="2"] #b3 {
+  left: 50%;
+  top: 72%;
+  width: 32%;
+}
+
+#container[data-scene="2"] #limbah {
+  left: 70%;
+  top: 69%;
+  width: 28%;
+}
+
+#container[data-scene="2"] #truk {
+  left: 63%;
+  top: 44%;
+  width: 26%;
+}
+
+#container[data-scene="2"] #celengan {
+  left: 7%;
+  top: 46%;
+  width: 27%;
+}
+
+#container[data-scene="3"] #medal {
+  left: 37%;
+  top: 17%;
+}
+
+#container[data-scene="3"] #poster1 {
+  left: 38%;
+  top: 29%;
+  width: 15%;
+}
+
+#container[data-scene="3"] #poster3 {
+  left: 4.6%;
+  top: 40%;
+  width: 9%;
+}
+
+#container[data-scene="3"] #bin {
+  left: 67%;
+  top: 42%;
+  width: 15%;
+}
+
+#container[data-scene="3"] #danger {
+  left: 20%;
+  top: 64%;
+  width: 12.5%;
+}
+
+#container[data-scene="3"] #book {
+  left: 68%;
+  top: 59%;
+  width: 19%;
+}
+
+#container[data-scene="3"] #poster4 {
+  left: 15%;
+  top: 35%;
+  width: 19%;
+}
+
+#container[data-scene="3"] #tablet {
+  left: 25%;
+  top: 56%;
+  width: 22%;
+}
+
+#switcher {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#switcher div {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  background-color: #8f4439;
+  color: white;
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center; /* Changed from align-content to align-items */
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.25s;
+  cursor: pointer; /* Changed from default to pointer */
+}
+
+#switcher .active {
+  color: black;
+  background-color: #b6aa61;
+}
+
+#switcher div:hover:not(.active) {
+  transform: scale(1.5);
+  background-color: darkred;
+}
+
+#popup {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.25s;
+}
+
+#popupBody {
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+}
+
+#popupControls {
+  width: 0;
+  position: relative;
+}
+
+#popup:not(.open), #popup:not(.open) #popupCloser {
+  top: 100%;
+}
+
+#popupImg {
+  min-width: 60%;
+  width: 600px;
+  max-width: calc(100% - 20px);
+  display: block;
+  margin: 0 auto; /* Combined margin properties */
+}
+
+#popupCloser {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#popupCloser:hover {
+  filter: brightness(150%);
+}
