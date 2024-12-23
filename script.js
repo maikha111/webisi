@@ -46,7 +46,7 @@ function toggleAudio() {
     // Remove the animation class after it completes
     setTimeout(() => {
         soundImage.classList.remove('boing');
-    }, 300); // Match this duration with the animation duration
+    }, 500); // Match this duration with the animation duration
 }
 // Prevent context menu on images
 function preventContextMenu(e) {
